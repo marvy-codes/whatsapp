@@ -1,7 +1,7 @@
 import React from 'react';
 import "./chat.css";
-import { Avatar, IconButton } from "@materal-ui/core";
-import { AttachFile, MoreVert, SearchOutlined } from "@materal-ui/icons";
+import {Avatar, IconButton} from "@material-ui/core";
+import { AttachFile, MoreVert, SearchOutlined } from "@material-ui/icons";
 
 function Chat() {
     return (
@@ -20,10 +20,21 @@ function Chat() {
                         <AttachFile />
                     </IconButton>
                     <IconButton>
-                        <MoreVertIcon />
+                        <MoreVert />
                     </IconButton>
                 </div>
             </div> 
+            <div className="chat__body">
+
+                <p>
+                    <span className="chat__name">sonny</span>
+                    <span className="chat_timestamp">
+                        {new Date().toUTCString()}
+                    </span>
+                    Hi, how are you today
+                </p>
+                 
+            </div>
         </div>
     )
 }
