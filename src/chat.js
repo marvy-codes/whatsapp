@@ -26,12 +26,12 @@ function Chat() {
             </div> 
             <div className="chat__body">
 
-                <p>
+                <p className="chat__message">
                     <span className="chat__name">sonny</span>
-                    <span className="chat_timestamp">
-                        {new Date().toUTCString()}
-                    </span>
                     Hi, how are you today
+                    <span className="chat__timestamp">
+                        {new Date().toUTCString()}
+                    </span> 
                 </p>
                  
             </div>
