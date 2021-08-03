@@ -24,7 +24,7 @@ function App() {
         alert(JSON.stringify(data));
         setMessages([...messages, newMessages]);
     })
-  }, [ ]);
+  }, [messages]);
 
   console.log(message);
 
