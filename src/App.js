@@ -6,7 +6,7 @@ import Pusher from 'pusher-js';
 import axios from "./axios.js";
 
 function App() {
-  const [message, setMessages] = useState([]);
+  const [messages, setMessages] = useState([]);
 
   useEffect(() => {
     axios.get('/messages/sync')
@@ -21,7 +21,8 @@ function App() {
     });
     const channel = pusher.subscribe('messages');
       channel.bind('inserted', function(data) {
-        alert(JSON.stringify(data))
+        alert(JSON.stringify(data));
+        setMessages([...messages, newMessages]);
     })
   }, [ ]);
 
